@@ -1,0 +1,8 @@
+version: "3.3"
+services:
+  mariadb:
+    image: '0xelasyaf/nginx-fpm72:latest'
+    hostname: nginx-fpm72
+    container_name: nginx-fpm72
+    ports:
+      - '80:80'
