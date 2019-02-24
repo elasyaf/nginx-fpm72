@@ -1,5 +1,5 @@
 # Docker Swift
-__Nginx__ with __PHP 7.2__ with __Ioncube loader__
+__Nginx__ with __PHP 7.2__ with __Ioncube loader__ + __FastCGI-FPM__
 
 ## How To
 
