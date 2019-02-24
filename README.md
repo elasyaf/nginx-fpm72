@@ -2,7 +2,7 @@
 
 # nginx-fpm72
 
-__Nginx__ with __PHP 7.2__ with __Ioncube loader__
+__Nginx__ with __PHP 7.2__
 
 ## How To
 
