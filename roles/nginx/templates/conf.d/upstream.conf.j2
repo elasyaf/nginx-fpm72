@@ -1,0 +1,5 @@
+# Fastcgi config for PHP-FPM
+
+upstream fastcgi_backend {
+       server  unix:/run/php/php7.2-fpm.sock;
+}
