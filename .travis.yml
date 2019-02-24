@@ -1,15 +1,15 @@
-os:
-  - ubuntu
-
-services:
-  - docker
+os: linux
+dist: bionic
+services: docker
 
 before_install:
   - docker build --no-cache -t 0xelasyaf/nginx-fpm72:latest .
+
+script:
   - docker run -d -p 80:80 0xelasyaf/nginx-fpm72:latest /bin/bash -c "service nginx status && service php7.2-fpm status"
   - docker ps -a
   - docker run 0xelasyaf/nginx-fpm72:latest /bin/bash -c "service nginx status && service php7.2-fpm status"
 
-script:
-  - bundle exec rake test
+after_script:
+- docker images
 
