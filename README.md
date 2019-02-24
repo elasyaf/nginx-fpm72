@@ -1,5 +1,6 @@
-# Docker Swift
-__Nginx__ with __PHP 7.2__ with __Ioncube loader__
+# nginx-fpm72
+
+__Nginx__ with __PHP 7.2__ with __Ioncube loader__ + __FastCGI-FPM__
 
 ## How To
 
@@ -27,5 +28,11 @@ __Nginx__ with __PHP 7.2__ with __Ioncube loader__
         container_name: nginx-fpm72
         ports:
           - '80:80'
-
+          
    ``` 
+   
+Author Information
+------------------
+
+elasyaf @ 2018
+
