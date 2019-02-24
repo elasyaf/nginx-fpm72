@@ -1,9 +1,9 @@
 version: "2.0"
 services:
-  nginx-fpm72:
-    image: '0xelasyaf/nginx-fpm72:latest'
-    hostname: nginx-fpm72
-    container_name: nginx-fpm72
+  nginx-php72:
+    image: '0xelasyaf/nginx-php72:latest'
+    hostname: nginx-php72
+    container_name: nginx-php72
     ports:
       - '80:80'
     environment:
