@@ -27,5 +27,11 @@ __Nginx__ with __PHP 7.2__ with __Ioncube loader__
         container_name: nginx-fpm72
         ports:
           - '80:80'
-
+          
    ``` 
+   
+Author Information
+------------------
+
+elasyaf @ 2018
+
