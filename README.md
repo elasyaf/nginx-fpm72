@@ -1,6 +1,6 @@
 # nginx-fpm72
 
-__Nginx__ with __PHP 7.2__ with __Ioncube loader__ + __FastCGI-FPM__
+__Nginx__ with __PHP 7.2__ with __Ioncube loader__
 
 ## How To
 
@@ -20,7 +20,7 @@ __Nginx__ with __PHP 7.2__ with __Ioncube loader__ + __FastCGI-FPM__
 3. With docker compose.
  
    ```
-   version: "3.3"
+   version: "2.0"
    services:
       mariadb:
         image: '0xelasyaf/nginx-fpm72:latest'
