@@ -5,10 +5,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t 0xelasyaf/nginx-php72:latest .
-  - docker run -d -p 80:80 0xelasyaf/nginx-php72:latest /bin/sh -c "cd /; bundle exec foreman start;"
+  - docker build --no-cache -t 0xelasyaf/nginx-fpm72:latest .
+  - docker run -d -p 80:80 0xelasyaf/nginx-fpm72:latest /bin/bash -c "service nginx status && service php7.2-fpm status"
   - docker ps -a
-  - docker run 0xelasyaf/nginx-php72:latest /bin/sh -c "cd /root/sinatra; bundle exec rake test"
+  - docker run 0xelasyaf/nginx-fpm72:latest /bin/bash -c "service nginx status && service php7.2-fpm status"
 
 script:
   - bundle exec rake test
