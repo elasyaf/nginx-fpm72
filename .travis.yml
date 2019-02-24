@@ -5,6 +5,8 @@ language: bash
 
 before_install:
   - git clone https://github.com/elasyaf/nginx-fpm72.git ~/nginx-fpm72
+  
+install:  
   - docker build --no-cache -t 0xelasyaf/nginx-fpm72:latest ~/nginx-fpm
 
 script:
