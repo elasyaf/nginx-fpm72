@@ -10,6 +10,14 @@
     update_cache: yes
     state: present
 
+
+###### Copy upstream #####
+
+- name: copy nginx configuration
+  template:
+      src: templates/conf.d/upstream.conf.j2
+      dest: /etc/nginx/conf.d/upstream.conf
+
 ###### Copy conf.d #####
 
 
@@ -17,7 +25,6 @@
   template:
       src: templates/conf.d/fastcgi-fpm.conf.j2
       dest: /etc/nginx/conf.d/fastcgi-fpm.conf
-
 
 ###### Copy nginx.conf #####
 
