@@ -12,7 +12,6 @@ install:
 script:
   - docker run -d -p 80:80 0xelasyaf/nginx-fpm72:latest /bin/bash -c "service nginx status && service php7.2-fpm status"
   - docker ps -a
-  - docker run 0xelasyaf/nginx-fpm72:latest /bin/bash -c "service nginx status && service php7.2-fpm status"
 
 after_script:
 - docker images
