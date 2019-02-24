@@ -1,0 +1,60 @@
+###### install nginx #####
+
+- name: add PPA repository for Nginx
+  apt_repository:
+    repo: 'ppa:nginx/stable'
+
+- name: install Nginx
+  apt:
+    name: nginx
+    update_cache: yes
+    state: present
+
+###### Copy conf.d #####
+
+- name: copy upstream
+  template:
+      src: templates/conf.d/upstream.conf.j2
+      dest: /etc/nginx/conf.d/upstream.conf
+  
+- name: copy status
+  template:
+      src: templates/conf.d/status.conf.j2
+      dest: /etc/nginx/conf.d/status.conf
+
+- name: copy fastcgi-fpm
+  template:
+      src: templates/conf.d/fastcgi-fpm.conf.j2
+      dest: /etc/nginx/conf.d/fastcgi-fpm.conf
+
+- name: copy magento configuration
+  template:
+      src: templates/conf.d/magento.conf.j2
+      dest: /etc/nginx/conf.d/magento.conf
+
+###### Copy nginx.conf #####
+
+- name: copy magento configuration
+  template:
+      src: templates/nginx.conf.j2
+      dest: /etc/nginx/nginx.conf
+
+###### sites-available #####
+
+- name: copy magento configuration
+  template:
+      src: templates/sites-available/magento.conf
+      dest: /etc/nginx/sites-available/magento.conf
+
+###### Add and remove symlink #####
+
+- name: symlink magento.conf
+  file:
+    src: /etc/nginx/sites-available/magento.conf
+    dest: /etc/nginx/sites-enabled/magento.conf
+    state: link
+  
+- name: symlink default
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent

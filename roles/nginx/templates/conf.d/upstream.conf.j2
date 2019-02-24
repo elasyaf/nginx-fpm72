@@ -1,0 +1,11 @@
+# Fastcgi config for PHP-FPM
+# ananda@icube.us
+
+upstream fastcgi_backend {
+        server  127.0.0.1:9000;
+#       server  127.0.0.1:9001;
+
+#       server  unix:/run/php/php7.0-fpm.sock;
+#       server  unix:/run/php/php7.1-fpm.sock;
+#       server  unix:/run/php/php7.2-fpm.sock;
+}
