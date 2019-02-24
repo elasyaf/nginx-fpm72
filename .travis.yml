@@ -4,7 +4,8 @@ services: docker
 language: bash
 
 before_install:
-  - docker build --no-cache -t 0xelasyaf/nginx-fpm72:latest .
+  - git clone https://github.com/elasyaf/nginx-fpm72.git ~/nginx-fpm72
+  - docker build --no-cache -t 0xelasyaf/nginx-fpm72:latest ~/nginx-fpm
 
 script:
   - docker run -d -p 80:80 0xelasyaf/nginx-fpm72:latest /bin/bash -c "service nginx status && service php7.2-fpm status"
