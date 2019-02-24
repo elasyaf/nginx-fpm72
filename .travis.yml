@@ -7,6 +7,7 @@ env:
   - DOCKER_COMPOSE_VERSION=1.23.2
 
 before_install:
+  - echo "$dockerpass" | docker login -u "$dockeruser" --password-stdin
   - sudo rm /usr/local/bin/docker-compose
   - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
   - chmod +x docker-compose
@@ -15,6 +16,7 @@ before_install:
 install:
   - git clone https://github.com/elasyaf/nginx-fpm72.git  
   - docker build --no-cache -t 0xelasyaf/nginx-fpm72:latest .
+  - docker push 0xelasyaf/nginx-fpm72:latest
 
 script:
   - docker-compose up -d
