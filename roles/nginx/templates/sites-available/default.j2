@@ -4,6 +4,6 @@ server {
     index  index.php index.html index.htm;
     server_name  $URL;
 
-    set $MAGE_ROOT /var/www/magento;
+    root /var/www/html;
     include conf.d/fastcgi-fpm.conf;
 }
