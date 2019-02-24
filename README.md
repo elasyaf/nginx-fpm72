@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/elasyaf/nginx-fpm72.svg?branch=master)](https://travis-ci.org/elasyaf/nginx-fpm72)
 
-![Coverage Status](https://coveralls.io/repos/github/elasyaf/nginx-fpm72/badge.svg?branch=master)](https://coveralls.io/github/elasyaf/nginx-fpm72?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/elasyaf/nginx-fpm72/badge.svg?branch=master)](https://coveralls.io/github/elasyaf/nginx-fpm72?branch=master)
 
 # nginx-fpm72
 
