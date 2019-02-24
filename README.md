@@ -41,5 +41,5 @@ GPL-3.0
 Author Information
 ------------------
 
-elasyaf @ 2018
+elasyaf @ 2019
 
