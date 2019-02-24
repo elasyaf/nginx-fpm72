@@ -9,33 +9,3 @@
     name: nginx
     update_cache: yes
     state: present
-
-
-###### Copy upstream #####
-
-- name: copy nginx configuration
-  template:
-      src: templates/conf.d/upstream.conf.j2
-      dest: /etc/nginx/conf.d/upstream.conf
-
-###### Copy conf.d #####
-
-
-- name: copy fastcgi-fpm
-  template:
-      src: templates/conf.d/fastcgi-fpm.conf.j2
-      dest: /etc/nginx/conf.d/fastcgi-fpm.conf
-
-###### Copy nginx.conf #####
-
-- name: copy nginx configuration
-  template:
-      src: templates/nginx.conf.j2
-      dest: /etc/nginx/nginx.conf
-
-###### sites-available #####
-
-- name: copy default configuration
-  template:
-      src: templates/sites-available/default.j2
-      dest: /etc/nginx/sites-available/default

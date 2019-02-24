@@ -1,9 +1,0 @@
-server {
-    listen 80;
-    listen [::]:80;
-    index  index.php index.html index.htm;
-    server_name  $URL;
-
-    root /var/www/html;
-    include conf.d/fastcgi-fpm.conf;
-}
