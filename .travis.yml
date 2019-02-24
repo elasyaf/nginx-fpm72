@@ -6,3 +6,10 @@ services:
 
 before_install:
   - docker build -t 0xelasyaf/nginx-php72:latest .
+  - docker run -d -p 80:80 0xelasyaf/nginx-php72:latest /bin/sh -c "cd /; bundle exec foreman start;"
+  - docker ps -a
+  - docker run 0xelasyaf/nginx-php72:latest /bin/sh -c "cd /root/sinatra; bundle exec rake test"
+
+script:
+  - bundle exec rake test
+
