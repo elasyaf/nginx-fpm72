@@ -21,14 +21,14 @@
 
 ###### Copy nginx.conf #####
 
-- name: copy magento configuration
+- name: copy nginx configuration
   template:
       src: templates/nginx.conf.j2
       dest: /etc/nginx/nginx.conf
 
 ###### sites-available #####
 
-- name: copy magento configuration
+- name: copy default configuration
   template:
       src: templates/sites-available/default.j2
       dest: /etc/nginx/sites-available/default
