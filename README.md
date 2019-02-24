@@ -30,7 +30,12 @@ __Nginx__ with __PHP 7.2__ with __Ioncube loader__ + __FastCGI-FPM__
           - '80:80'
           
    ``` 
-   
+License
+------------------
+
+GPL-3.0
+
+
 Author Information
 ------------------
 
