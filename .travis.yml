@@ -1,6 +1,7 @@
 os: linux
 dist: bionic
 services: docker
+language: bash
 
 before_install:
   - docker build --no-cache -t 0xelasyaf/nginx-fpm72:latest .
