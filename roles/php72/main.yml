@@ -26,8 +26,3 @@
     - php7.2-xmlrpc
     - php7.2-dev
     - php7.2-soap
-
-- name: download ioncube file and save to /usr/lib/php/20160303/
-  command: wget -c https://s3-ap-southeast-1.amazonaws.com/icube.us/_swift/ioncube/ioncube_loader_lin_7.2.so
-  args:
-    chdir: /usr/lib/php/20170718
