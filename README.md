@@ -24,7 +24,7 @@ __Nginx__ with __PHP 7.2__
    ```
    version: "2.0"
    services:
-      mariadb:
+      nginx-fpm:
         image: '0xelasyaf/nginx-fpm72:latest'
         hostname: nginx-fpm72
         container_name: nginx-fpm72
