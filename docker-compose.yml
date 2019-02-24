@@ -6,3 +6,5 @@ services:
     container_name: nginx-fpm72
     ports:
       - '80:80'
+    environment:
+      - URL=docker.elasyaf.us
